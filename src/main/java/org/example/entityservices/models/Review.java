@@ -18,7 +18,7 @@ public class Review  extends BaseModel{
     private String content;
     @Column(nullable = false)
     private Double rating;
-    @Column(name = "averageRating")
+    @Column(name = "average_rating")
     private double averageRating;
 
 
