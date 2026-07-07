@@ -26,6 +26,15 @@ public class Passenger extends BaseModel{
              cascade = {CascadeType.MERGE, CascadeType.PERSIST})
      List<Booking> bookings;
 
+     @OneToOne
+     @JoinColumn(name = "active_booking_id")
+     private Booking activeBooking;
+
+     @OneToOne
+     @JoinColumn(name = "exact_location_id")
+     private ExactLocation exactLocation;
+
+     private double ratingAverage;
 
 
      public void addBooking(Booking booking) {

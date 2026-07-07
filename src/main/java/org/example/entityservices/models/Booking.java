@@ -2,6 +2,7 @@ package org.example.entityservices.models;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.example.entityservices.models.Enums.BookingStatus;
 
 import java.time.LocalDateTime;
 
@@ -36,5 +37,13 @@ public class Booking extends BaseModel{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "passenger_id")
     private Passenger passenger;
+
+    @OneToOne
+    @JoinColumn(name = "start_location_id")
+    private ExactLocation startLocation;
+
+    @OneToOne
+    @JoinColumn(name = "end_location_id")
+    private ExactLocation endLocation;
 
 }

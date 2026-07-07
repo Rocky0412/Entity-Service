@@ -1,4 +1,4 @@
-package org.example.entityservices.models;
+package org.example.entityservices.models.Enums;
 
 public enum BookingStatus {
     ON_THE_WAY,

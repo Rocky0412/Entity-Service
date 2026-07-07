@@ -1,0 +1,2 @@
+ALTER TABLE driver
+    ADD COLUMN avgRating DOUBLE;
